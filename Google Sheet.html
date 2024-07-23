@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="google sheet.css" />
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>
+		ถามคนเชียงใหม่ ผ่านฝุ่นปี 67 กันมาอย่างไร?
+	</title>
+</head>
+
+<body>
+	<div class="container">
+		<form method="post" name="contact-form" id="regForm">
+			<!--form head-->
+			<div class="tab">
+				<img src="asset/cover.png" id="cover-image" style="border:2px solid black">
+				<h4>
+					ถามคนเชียงใหม่ ผ่านฝุ่นปี 67 <br> กันมาอย่างไร?
+				</h4>
+				<p>ยังจำกันได้ไหมว่าฝุ่นปี 67 นั้นรุนแรงและยาวนานกว่าปีก่อนๆ ขอเสียงคนเชียงใหม่ที่ผ่านฝุ่นมาด้วยกัน
+					เพื่อเป็นข้อมูลใช้ออกแบบการจัดการฝุ่นควันร่วมกัน
+					กับสภาลมหายใจเชียงใหม่ กลไกรัฐ และเอกชนจังหวัดเชียงใหม่
+				</p>
+			</div>
+
+			<!--from input-->
+
+			<!-- Step 1 -->
+			<div class="tab">
+				<h2>
+					ผลกระทบต่อตนเอง ครอบครัว การทำงาน/ธุรกิจ?
+				</h2>
+				<textarea name="ผลกระทบต่อตนเอง" rows="7" placeholder="ใส่ความเห็นของคุณ"></textarea>
+			</div>
+
+			<!-- Step 2 -->
+			<div class="tab">
+				<h2>
+					คุณดูแลตนเองและครอบครัวอย่างไร?
+				</h2>
+				<textarea name="ดูแลตนเองอย่างไร" rows="7" placeholder="ใส่ความเห็นของคุณ"></textarea>
+			</div>
+
+			<!-- Step 3 -->
+			<div class="tab">
+				<h2>
+					ช่วงฝุ่นควันปี 67 ที่ผ่านมา คุณเสียค่าใช้จ่ายในการป้องกันตนเอง/ครอบครัวจากฝุ่น เท่าไหร่
+					(ประมาณการณ์)
+				</h2>
+				<textarea name="เสียค่าใช้จ่ายเท่าไร" rows="7" placeholder="ใส่ความเห็นของคุณ"></textarea>
+			</div>
+
+			<!-- Step 4 -->
+			<div class="tab">
+				<h2>
+					คุณคิดว่า คุณจะมีส่วนช่วยลดฝุ่นควันได้อย่างไร?
+				</h2>
+				<textarea name="คุณจะมีส่วนช่วยลดฝุ่นควันได้อย่างไร" rows="7"
+					placeholder="ใส่ความเห็นของคุณ"></textarea>
+			</div>
+
+			<!--submit-->
+			<input type="submit" value="ส่งข้อมูล" id="submit" />
+		</form>
+
+		<!-- Navigation Buttons -->
+		<div class="nav-buttons">
+			<button type="button" id="prevBtn" onclick="nextPrev(-1)">ก่อนหน้า</button>
+			<button type="button" id="nextBtn" onclick="nextPrev(1)">ถัดไป</button>
+		</div>
+
+		<!-- Step Indicators -->
+		<div style="text-align: center; margin-top: 40px">
+			<span class="step"></span>
+			<span class="step"></span>
+			<span class="step"></span>
+			<span class="step"></span>
+		</div>
+	</div>
+
+	<!-- Modal Structure -->
+	<div id="successModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>คำตอบจะรวมนำเสนอในเวที “วาระเชียงใหม่ : วาระแก้ไขฝุ่นควันจังหวัดเชียงใหม่“
+				30 ก.ค. 67 13.00-16.30น. ณ จริงใจ มาร์เกต และรับชม Facebook Live <a
+					href="https://www.facebook.com/profile.php?id=61556678381070">ผ่าน Facebook : วาระเชียงใหม่</a></p>
+		</div>
+	</div>
+
+	<script src="google sheet.js"></script>
+</body>
+
+</html>
