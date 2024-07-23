@@ -30,7 +30,7 @@ body {
   align-items: center; /* Center children horizontally */
 }
 
-h4 {
+h1 {
   margin-bottom: 10px;
   font-size: 36px;
   color: white;
@@ -225,7 +225,7 @@ div {
     padding: 10px;
   }
 
-  h4 {
+  h1 {
     font-size: 24px;
   }
 
