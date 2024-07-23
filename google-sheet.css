@@ -68,6 +68,8 @@ textarea {
   color: white;
   margin-top: 10px;
   border-radius: 5px;
+  min-width: 100%;
+  padding: 8px;
 }
 
 #submit:hover {
@@ -110,7 +112,7 @@ img {
 }
 
 .step.finish {
-  background-color: #4caf50;
+  background-color: #fcb000;
 }
 
 h2 {

@@ -3,6 +3,7 @@ const scriptURL =
 const form = document.forms["contact-form"];
 const modal = document.getElementById("successModal");
 const closeModal = document.getElementsByClassName("close")[0];
+const submitButton = document.getElementById("submit");
 
 // Ensure modal is hidden on page load
 window.onload = function () {
@@ -12,11 +13,19 @@ window.onload = function () {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validateForm()) {
+    submitButton.textContent = "โปรดรอสักครูกำลังส่งข้อมูล...."; // Change button text
+    submitButton.classList.add("loading"); // Add loading class to change color
+    submitButton.disabled = true; // Disable the button to prevent multiple submissions
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
       .then((response) => {
         showModal();
       })
-      .catch((error) => console.error("Error!", error.message));
+      .catch((error) => {
+        console.error("Error!", error.message);
+        submitButton.textContent = "ส่งข้อมูล"; // Revert button text in case of error
+        submitButton.classList.remove("loading"); // Remove loading class to revert color
+        submitButton.disabled = false; // Re-enable the button
+      });
   }
 });
 

@@ -5,9 +5,15 @@
 	<link rel="stylesheet" href="google-sheet.css" />
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>
-		ถามคนเชียงใหม่ ผ่านฝุ่นปี 67 กันมาอย่างไร?
-	</title>
+	<title>ถามคนเชียงใหม่ ผ่านฝุ่นปี 67 กันมาอย่างไร?</title>
+	<style>
+		.loading {
+			background-color: #ffcc00;
+			/* Change to desired color */
+			color: white;
+			/* Ensure text is visible */
+		}
+	</style>
 </head>
 
 <body>
@@ -62,7 +68,9 @@
 			</div>
 
 			<!--submit-->
-			<input type="submit" value="ส่งข้อมูล" id="submit" />
+			<button type="submit" id="submit" class="btn-with-spinner">
+				ส่งข้อมูล
+			</button>
 		</form>
 
 		<!-- Navigation Buttons -->
