@@ -13,7 +13,7 @@ window.onload = function () {
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   if (validateForm()) {
-    submitButton.textContent = "โปรดรอสักครูกำลังส่งข้อมูล...."; // Change button text
+    submitButton.textContent = "โปรดรอสักครู่กำลังส่งข้อมูล...."; // Change button text
     submitButton.classList.add("loading"); // Add loading class to change color
     submitButton.disabled = true; // Disable the button to prevent multiple submissions
     fetch(scriptURL, { method: "POST", body: new FormData(form) })
